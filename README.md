@@ -88,5 +88,11 @@ is a common way to avoid waterfalls by initiating all data requests at the same
 Route Handlers are functions that are executed when users access site routes. They’re responsible for handling incoming HTTP requests for the defined URLs or routes to produce the required data.
 #### Request waterfalls
 A "waterfall" refers to a sequence of network requests that depend on the completion of previous requests. In the case of data fetching, each request can only begin once the previous request has returned data.
+#### Static Rendering 
+it means that data fetching and rendering happens on the server at build time (when you deploy) or when [revalidating data](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data).
+#### Dynamic Rendering
+With dynamic rendering, content is rendered on the server for each user at **request time** (when the user visits the page).
+==With dynamic rendering, **your application is only as fast as your slowest data fetch.
 ### Good to know 
 - By default, Next.js applications use **React Server Components**.
+- With dynamic rendering, **your application is only as fast as your slowest data fetch.**
